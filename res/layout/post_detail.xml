@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_background"
+    tools:context=".PostDetailActivity" >
+
+    <include
+        android:id="@+id/navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/navigation_bar" >
+    </include>
+
+    <LinearLayout
+        android:id="@+id/interfaceaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/comment"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_tab_background"
+            android:onClick="comment" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_discovery"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:contentDescription="@string/todo" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/praise"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_tab_background"
+            android:onClick="praise" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_personal"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:contentDescription="@string/todo" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+     <ListView
+        android:id="@+id/replylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigationbar"
+        android:layout_above="@id/interfaceaction"
+        android:divider="@null"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"/>
+
+</RelativeLayout>
