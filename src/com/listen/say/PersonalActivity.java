@@ -1,5 +1,7 @@
 package com.listen.say;
 
+import com.listen.say.utils.NavigationBarUtil;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +20,7 @@ public class PersonalActivity extends Fragment {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
 				R.layout.testitem);
 		for (int i = 0; i < 15; i++) {
-			adapter.add("¸öÈË " + i);
+			adapter.add("ï¿½ï¿½ï¿½ï¿½ " + i);
 		}
 		ListView listView = (ListView) view.findViewById(R.id.personal);
 		listView.setAdapter(adapter);
@@ -28,10 +30,7 @@ public class PersonalActivity extends Fragment {
 	}
 
 	private void setNavigationBar(View navigationBar) {
-		Button left = (Button) navigationBar.findViewById(R.id.navi_left);
-		left.setVisibility(View.INVISIBLE);
-		Button right = (Button) navigationBar.findViewById(R.id.navi_right);
-		right.setVisibility(View.INVISIBLE);
+		NavigationBarUtil.setNavigationBar(navigationBar, 0, 0, R.string.my);
 	}
 
 	@Override

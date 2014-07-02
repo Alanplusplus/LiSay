@@ -1,5 +1,7 @@
 package com.listen.say;
 
+import com.listen.say.utils.NavigationBarUtil;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class PostDetailActivity extends Activity {
@@ -20,7 +23,7 @@ public class PostDetailActivity extends Activity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.testitem);
 		for (int i = 0; i < 15; i++) {
-			adapter.add("»Ø¸´ " + i);
+			adapter.add("replay " + i);
 		}
 		ListView listView = (ListView) findViewById(R.id.replylist);
 		listView.addHeaderView(LayoutInflater.from(this).inflate(
@@ -31,12 +34,10 @@ public class PostDetailActivity extends Activity {
 	}
 
 	private void setNavigationBar(View navigationBar) {
-		Button right = (Button) navigationBar.findViewById(R.id.navi_right);
-		right.setVisibility(View.INVISIBLE);
-		
-		Button left = (Button) navigationBar.findViewById(R.id.navi_left);
+		NavigationBarUtil.setNavigationBar(navigationBar, R.drawable.ic_navi_back, 0, 0);
+		ImageView left = (ImageView) navigationBar.findViewById(R.id.navi_left);
 		left.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				finish();
@@ -61,12 +62,11 @@ public class PostDetailActivity extends Activity {
 		PrintLog.log(getClass().getName() + ":onstop");
 		super.onStop();
 	}
-	
-	public void comment(View v)
-	{
+
+	public void comment(View v) {
 		PrintLog.log(getClass().getName() + ":comment");
 	}
-	
+
 	public void praise(View v) {
 		PrintLog.log(getClass().getName() + ":praise");
 	}

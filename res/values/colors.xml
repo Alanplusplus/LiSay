@@ -3,4 +3,7 @@
         <color name="base_theme_color">#ff3674BE</color>
         <color name="base_theme_highlight_color">#ff2253a5</color>
         <color name="custom_background">#ffe7e7e7</color>
+        <color name="navi_text_color">#ffffffff</color>
+        <color name="text_color_normal">#ff222222</color>
+        <color name="text_color_sub">#ff888888</color>
     </resources>

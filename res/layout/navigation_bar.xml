@@ -2,42 +2,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/base_theme_color"
-    android:orientation="horizontal" >
-
-    <Button
-        android:id="@+id/navi_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
-        android:layout_marginLeft="2dip"
-        android:background="@drawable/navi_back"
-        android:contentDescription="@string/todo" />
+    android:background="@drawable/bg_navi"
+    android:orientation="horizontal"
+    android:baselineAligned="false" >
 
     <RelativeLayout
-        android:id="@+id/navi_titlearea"
+        android:id="@+id/navi_leftarea"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1" >
 
         <ImageView
+            android:id="@+id/navi_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/ic_navi_back"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navi_titlearea"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1" >
+
+        <ImageView
             android:id="@+id/navi_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:background="@drawable/navi_logo"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo_navi"
+            android:contentDescription="@string/todo" />
+        
+        <TextView 
+            android:id="@+id/navi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/navi_text_color"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:text="@string/todo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navi_rightarea"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/navi_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_navi_new"
             android:contentDescription="@string/todo" />
     </RelativeLayout>
-    
-    <Button
-        android:id="@+id/navi_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:layout_marginRight="2dip"
-        android:background="@drawable/navi_back"
-        android:contentDescription="@string/todo" />
 
 </LinearLayout>

@@ -6,5 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="todo">todo</string>
     <string name="post_hint">请输入发布内容</string>
+    <string name="auction">拍卖</string>
+    <string name="my">我</string>
+    <string name="testcontent">清朝末年，闽西各县文人前往汀州应试。武平一文人带去</string>
 
 </resources>

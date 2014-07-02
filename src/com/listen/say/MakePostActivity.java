@@ -1,10 +1,13 @@
 package com.listen.say;
 
+import com.listen.say.utils.NavigationBarUtil;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MakePostActivity extends Activity {
 
@@ -18,12 +21,10 @@ public class MakePostActivity extends Activity {
 	}
 
 	private void setNavigationBar(View navigationBar) {
-		Button right = (Button) navigationBar.findViewById(R.id.navi_right);
-		right.setBackgroundResource(R.drawable.navi_chatroom);
-
-		Button left = (Button) navigationBar.findViewById(R.id.navi_left);
+		NavigationBarUtil.setNavigationBar(navigationBar, R.drawable.ic_navi_back, R.drawable.navi_chatroom, R.string.my);
+		ImageView left = (ImageView) navigationBar.findViewById(R.id.navi_left);
 		left.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
 				finish();

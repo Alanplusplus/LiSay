@@ -18,12 +18,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:baselineAligned="false"
+        android:background="@drawable/bg_navi"
         android:orientation="horizontal" >
 
         <RelativeLayout
             android:id="@+id/comment"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/bottom_tab_background"
             android:onClick="comment" >
@@ -31,17 +32,15 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/tab_discovery"
+                android:background="@drawable/ic_bottom_praise"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="10dip"
-                android:layout_marginBottom="10dip"
                 android:contentDescription="@string/todo" />
         </RelativeLayout>
         
         <RelativeLayout
             android:id="@+id/praise"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/bottom_tab_background"
             android:onClick="praise" >
@@ -49,10 +48,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/tab_personal"
+                android:background="@drawable/ic_bottom_comment"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="10dip"
-                android:layout_marginBottom="10dip"
                 android:contentDescription="@string/todo" />
         </RelativeLayout>
     </LinearLayout>
